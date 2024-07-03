@@ -1,6 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { HiChevronDoubleLeft  } from "react-icons/hi";
+import AssigneDropBox from './AssigneDropBox';
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: false },
@@ -15,7 +16,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function TopBar() {
   return (
     <Disclosure as="nav" className="bg-gray-600 absolute top-0 left-0 w-full flex">
       {({ open }) => (
@@ -59,7 +60,7 @@ export default function Example() {
                       </a>
                     ))}
                   </div>
-                </div>
+                </div>                
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
@@ -112,7 +113,10 @@ export default function Example() {
                   </MenuItems>
                 </Menu>
               </div>
-            </div>
+              <div className='ml-16'>
+                <AssigneDropBox/>
+              </div>
+           </div>
           </div>
         </>
       )}

@@ -19,51 +19,33 @@ const Chatbox = () => {
       const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
-    <div className="fixed bottom-0 w-full p-4 bg-gray-100 border-t absolute left-0">
+    <div className="fixed bottom-14  left-12 w-10/12 bg-transparent ">
     <div className="flex items-center">
-      <button
+      {/* <button
         className="p-2 focus:outline-none"
         onClick={() => setShowEmojiPicker(!showEmojiPicker)}
       >
         😊
-      </button>
-      {showEmojiPicker && (
+      </button> */}
+      {/* {showEmojiPicker && (
         <Picker
           set="apple"
           onSelect={onEmojiClick}
           style={{ position: 'absolute', bottom: '60px', left: '20px' }}
         />
-      )}
+      )} */}
       <textarea
-        className="flex-grow p-2 ml-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-        rows="1"
+        className="flex-grow border p-10 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg"
+        rows="5"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Napisz wiadomość..."
+        placeholder="Your text.."
       ></textarea>
-      <div {...getRootProps()} className="p-2 focus:outline-none cursor-pointer">
-        <input {...getInputProps()} />
-        📎
-      </div>
-      <button className="p-2 ml-2 bg-blue-500 text-white rounded focus:outline-none">
-        Wyślij
+
+      <button className="p-2 ml-2 bg-blue-500 text-white rounded focus:outline-none w-[8%] py-10">
+        Send
       </button>
     </div>
-    {attachments.length > 0 && (
-      <div className="mt-2">
-        {attachments.map((file, index) => (
-          <div key={index} className="flex items-center justify-between p-2 bg-gray-200 rounded mt-1">
-            <span>{file.name}</span>
-            <button
-              className="text-red-500"
-              onClick={() => setAttachments(attachments.filter((_, i) => i !== index))}
-            >
-              ❌
-            </button>
-          </div>
-        ))}
-      </div>
-    )}
   </div>
   )
 }
