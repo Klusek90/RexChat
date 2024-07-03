@@ -1,15 +1,16 @@
 
 import './App.css'
-import TaskInfo from './components/TaskInfo';
-import Topbar from './components/Topbar';
+import Chatbox from './components/Chatbox';
+import Example from './components/Navbar';
+import TaskSideBar from './components/TaskSideBar';
 
 function App() {
 
   return (
     <div>
-        <Topbar/>
-        <h1 class="text-3xl font-bold underline">test</h1>
-        <TaskInfo/>
+        <TaskSideBar/>
+        <Example/>
+        <Chatbox/>
         
   </div>
   )
