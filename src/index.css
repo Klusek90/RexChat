@@ -70,6 +70,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  
 }
 
-
+.content{
+    width: 60vw;
+    margin-left: -200px;
+  }
