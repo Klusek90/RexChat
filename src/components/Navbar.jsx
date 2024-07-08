@@ -18,12 +18,12 @@ function classNames(...classes) {
 
 export default function TopBar() {
   return (
-    <Disclosure as="nav" className="bg-gray-600 absolute top-0 left-0 w-full flex">
+    <Disclosure as="nav" className="bg-gray-600 top-0 left-0 w-full flex">
       {({ open }) => (
         <>
           <div className="ml-12 max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className=" inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />

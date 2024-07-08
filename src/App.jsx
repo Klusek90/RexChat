@@ -16,22 +16,26 @@ function App() {
     { id: 5, text: 'Bla bla!', sender: 'user' }
   ]);
 
-const addmessage= () =>{
-  const newMessage = { id: 6, text: 'New message!', sender: 'user' }; 
-  const newMessages = [...messages, newMessage];
+const handleResponse = (message) => {
+  const newMessages = [...messages, message];
   setMessages(newMessages);
-}
+};
 
   return (
     <div className='App'>
 
       <div className='content'>
-        <footer className='absolute bottom-0 left-0 border-t-2 p-3 w-full text-sm'>Copyright © Datagraphic Ltd 2024</footer>
         <TopBar/>
-        <TaskSideBar/>
-        <Chatbox addmessage={addmessage}/>
-        <Chatwindow messages={messages }/>     
+        {/* <TaskSideBar/> */}
+        <div>
+          <Chatwindow messages={messages}/>     
+          <Chatbox onResponse={handleResponse}/>
+        </div>
+
       </div>
+        <footer 
+        // className='absolute bottom-0 left-0 border-t-2 p-3 w-full text-sm'
+        >Copyright © Datagraphic Ltd 2024</footer>
       
   </div>
   )
