@@ -26,7 +26,7 @@ const TaskSideBar = () => {
   }
 
   return (
-    <aside className=' bg-gray-700 shadow-sm'>
+    <aside className=' bg-gray-700 shadow-sm w-16 absolute'>
         <div>
             <ul>
                 <li ><p >Task</p></li>

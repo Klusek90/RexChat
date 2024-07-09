@@ -26,16 +26,14 @@ const handleResponse = (message) => {
 
       <div className='content'>
         <TopBar/>
-        {/* <TaskSideBar/> */}
+        <TaskSideBar/>
         <div>
           <Chatwindow messages={messages}/>     
           <Chatbox onResponse={handleResponse}/>
         </div>
 
       </div>
-        <footer 
-        // className='absolute bottom-0 left-0 border-t-2 p-3 w-full text-sm'
-        >Copyright © Datagraphic Ltd 2024</footer>
+        <footer className='absolute bottom-0 left-0 border-t-2 p-3 w-full text-sm text-center'>Copyright © Datagraphic Ltd 2024</footer>
       
   </div>
   )
