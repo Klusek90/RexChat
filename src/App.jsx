@@ -1,6 +1,6 @@
 
 import './App.css'
-import Chatbox from './components/Chatbox';
+
 import Chatwindow from './components/MessageWindow';
 import TopBar from './components/Navbar';
 import TaskSideBar from './components/TaskSideBar';
@@ -27,13 +27,10 @@ const handleResponse = (message) => {
       <div className='content'>
         <TopBar/>
         <TaskSideBar/>
-        <div>
-          <Chatwindow messages={messages}/>     
-          <Chatbox onResponse={handleResponse}/>
-        </div>
+        <Chatwindow messages={messages} handleResponse={handleResponse}/>       
 
       </div>
-        <footer className='absolute bottom-0 left-0 border-t-2 p-3 w-full text-sm text-center'>Copyright © Datagraphic Ltd 2024</footer>
+        <footer className='border-t-2 p-3 w-full text-sm text-center'>Copyright © Datagraphic Ltd 2024</footer>
       
   </div>
   )
