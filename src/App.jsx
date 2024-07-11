@@ -30,7 +30,7 @@ const handleResponse = (message) => {
         <Chatwindow messages={messages} handleResponse={handleResponse}/>       
 
       </div>
-        <footer className='border-t-2 p-3 w-full text-sm text-center'>Copyright © Datagraphic Ltd 2024</footer>
+        <footer className='p-4 w-full text-sm text-center'>Copyright © Datagraphic Ltd 2024</footer>
       
   </div>
   )

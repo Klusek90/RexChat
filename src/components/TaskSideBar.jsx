@@ -37,7 +37,7 @@ const TaskSideBar = () => {
                 <li ><button className='bg-green-200 text-black p-5 text-center mb-1 hover:bg-green-400' onClick={startTask}> <FaPlay /></button></li>
                 <li ><button className='bg-yellow-100 text-black p-5 mb-1 hover:bg-yellow-400' onClick={pauseTask}> <TbPlayerPauseFilled /></button></li>
                 <li ><button className='bg-red-600 p-5 mb-1 hover:bg-red-800' onClick={stopTask}> <TbPlayerStopFilled/></button></li>
-                <li ><button className='bg-blue-300 text-black p-5' onClick={estimate}> <FaClock /></button></li>
+                <li ><button className='bg-blue-300 text-black p-5  hover:bg-blue-800' onClick={estimate}> <FaClock /></button></li>
             </ul>
          </div>
        
